@@ -15,7 +15,7 @@ eureka:
     register-with-eureka: false  
     service-url:
       defaultZone: http://localhost:8003/eureka/,http://localhost:8004/eureka/
-      #单机eureka只需要写自己的地址，集群需要写其他的eureka地址
+      
 ---
 server:
   port: 8003
@@ -30,4 +30,4 @@ eureka:
     register-with-eureka: false  
     service-url:
       defaultZone: http://localhost:8003/eureka/,http://localhost:8004/eureka/
-      #单机eureka只需要写自己的地址，集群需要写其他的eureka地址
+      
