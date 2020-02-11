@@ -1,0 +1,33 @@
+spring:
+    profiles:
+        active: dev
+---
+server:
+  port: 8002
+spring:
+    profiles: dev
+eureka:
+  instance:
+    hostname: eureka-server-8002 #eureka主机名
+  client:
+    registry-fetch-interval-seconds: 10
+    fetch-registry: false  #自己为注册中心
+    register-with-eureka: false  #表示是否向自己注册
+    service-url:
+      defaultZone: http://localhost:8003/eureka/,http://localhost:8004/eureka/
+      #单机eureka只需要写自己的地址，集群需要写其他的eureka地址
+---
+server:
+  port: 8002
+spring:
+    profiles: test
+eureka:
+  instance:
+    hostname: eureka-server-8002 #eureka主机名
+  client:
+    registry-fetch-interval-seconds: 10
+    fetch-registry: false  #自己为注册中心
+    register-with-eureka: false  #表示是否向自己注册
+    service-url:
+      defaultZone: http://localhost:8003/eureka/,http://localhost:8004/eureka/
+      #单机eureka只需要写自己的地址，集群需要写其他的eureka地址
