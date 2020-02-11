@@ -5,9 +5,9 @@ spring:
 spring:
     profiles: dev
     application:
-        name:springcloud-config-dev
+        name:springcloud-provider-dept
 ---
 spring:
     profiles: test
     application:
-        name:springcloud-config-test
+        name:springcloud-provider-dept
